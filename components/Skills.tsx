@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { CSSTransition } from "react-transition-group";
+import './Skills.css'; // Make sure to create this CSS file for the transition styles
 
 function Skills() {
   let icons1 = [
@@ -74,11 +76,6 @@ function Skills() {
       n: "Supabase",
       lnk: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
     },
-    // {
-    //   k: 12,
-    //   n: "Neo 4j",
-    //   lnk: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original-wordmark.svg",
-    // },
     {
       k: 13,
       n: "Express Js",
@@ -181,121 +178,89 @@ function Skills() {
   return (
     <div id="skills" className="flex justify-center font-Grotesk">
       <div className="md:p-4 md:w-[85vw] my-32 flex flex-col items-center">
-      <h1 className="heading font-Grotesk mb-20">
-        Tech I&apos;ve had a chance to{" "}
-        <span className="text-purple">Work On</span>
-      </h1>
-        <div className="flex mb-8 font-medium text-[17px]">
+        <h1 className="heading font-Grotesk mb-20">
+          Tech I&apos;ve had a chance to{" "}
+          <span className="text-purple">Work On</span>
+        </h1>
+        <div className="flex mb-12 font-medium text-[18px] md:text-[20px] toggle-bar">
           <button
             onClick={() => setActiveComponent("frontend")}
             className={`px-6 py-2 rounded-l-full border-slate-800 border-y border-l ${activeComponent === "frontend"
-              ? "bg-purple text-black"
-              : "bg-gray-200"
+                ? "active"
+                : "inactive"
               }`}
-            style={
-              activeComponent !== "frontend"
-                ? {
-                  background: "rgb(4,7,29)",
-                  backgroundColor:
-                    "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                }
-                : {}
-            }
           >
             Frontend
           </button>
           <button
             onClick={() => setActiveComponent("backend")}
             className={`px-6 py-2 border-slate-800 border ${activeComponent === "backend"
-              ? "bg-purple text-black"
-              : "bg-gray-200"
+                ? "active"
+                : "inactive"
               }`}
-            style={
-              activeComponent !== "backend"
-                ? {
-                  background: "rgb(4,7,29)",
-                  backgroundColor:
-                    "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                }
-                : {}
-            }
           >
             Backend
           </button>
           <button
             onClick={() => setActiveComponent("others")}
             className={`px-6 py-2 border-slate-800 rounded-r-full border-y border-r ${activeComponent === "others"
-              ? "bg-purple text-black"
-              : "bg-gray-200"
+                ? "active"
+                : "inactive"
               }`}
-            style={
-              activeComponent !== "others"
-                ? {
-                  background: "rgb(4,7,29)",
-                  backgroundColor:
-                    "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                }
-                : {}
-            }
           >
             Others
           </button>
         </div>
-        <div className="md:p-4 w-full flex justify-center">{activeComponent == "frontend" ? <div className="flex flex-wrap gap-20 justify-center">
-          {" "}
-          {icons1.map((icons, k) => (
-            <div key={icons.k} className="front">
-              <p className="text-center font-semibold mt-[10px] text-[16px]">
-                {icons.n}
-              </p>
-              <img
-                src={icons.lnk}
-                // data-tilt
-                // data-tilt-max="35"
-                // data-tilt-speed="1000"
-                // data-tilt-reverse="true"
-                // data-tilt-perspective="3000"
-                className="my-[4px] mb-[10px] mx-auto drop-shadow-2xl w-[70px] h-[40px] lg:h-[55px] xl:h-[60px] object-contain"
-              ></img>
+        <div className="md:p-4 w-full flex justify-center">
+          {activeComponent === "frontend" && (
+            <div className="flex flex-wrap gap-20 justify-center">
+              {icons1.map((icons, k) => (
+                <div key={icons.k} className="front">
+                  <p className="text-center font-semibold mt-[10px] text-[16px]">
+                    {icons.n}
+                  </p>
+                  <img
+                    src={icons.lnk}
+                    className="my-[4px] mb-[10px] mx-auto drop-shadow-2xl w-[70px] h-[40px] lg:h-[55px] xl:h-[60px] object-contain"
+                  ></img>
+                </div>
+              ))}
             </div>
-          ))}
-        </div> : ""}{activeComponent == "backend" ? <div className="flex flex-wrap gap-20 justify-center">
-          {icons2.map((icons, k) => (
-            <div key={icons.k} className="">
-              <p className="text-center font-semibold mt-[10px] text-[16px]">
-                {icons.n}
-              </p>
-              <img
-                src={icons.lnk}
-                // data-tilt
-                // data-tilt-max="35"
-                // data-tilt-speed="1000"
-                // data-tilt-reverse="true"
-                // data-tilt-perspective="3000"
-                className="my-[4px] mb-[10px] mx-auto drop-shadow-2xl w-[70px] h-[40px] lg:h-[55px] xl:h-[60px] object-contain"
-              ></img>
+          )}
+          {activeComponent === "backend" && (
+            <div className="flex flex-wrap gap-20 justify-center">
+              {icons2.map((icons, k) => (
+                <div key={icons.k} className="">
+                  <p className="text-center font-semibold mt-[10px] text-[16px]">
+                    {icons.n}
+                  </p>
+                  <img
+                    src={icons.lnk}
+                    className="my-[4px] mb-[10px] mx-auto drop-shadow-2xl w-[70px] h-[40px] lg:h-[55px] xl:h-[60px] object-contain"
+                  ></img>
+                </div>
+              ))}
             </div>
-          ))}
-        </div> : ""}{activeComponent == "others" ? <div className="flex flex-wrap gap-20 justify-center">
-          {icons3.map((icons, k) => (
-            <div key={icons.k} className="text-center">
-              <p className="m-auto font-semibold mt-[10px] text-[16px]">
-                {icons.n}
-              </p>
-              <img
-                src={icons.lnk}
-                // data-tilt
-                // data-tilt-max="35"
-                // data-tilt-speed="1000"
-                // data-tilt-reverse="true"
-                // data-tilt-perspective="3000"
-                className="my-[4px] mb-[10px] mx-auto drop-shadow-2xl w-[70px] h-[40px] lg:h-[55px] xl:h-[60px] object-contain"
-              ></img>
+          )}
+          {activeComponent === "others" && (
+            <div className="flex flex-wrap gap-20 justify-center">
+              {icons3.map((icons, k) => (
+                <div key={icons.k} className="text-center">
+                  <p className="m-auto font-semibold mt-[10px] text-[16px]">
+                    {icons.n}
+                  </p>
+                  <img
+                    src={icons.lnk}
+                    className="my-[4px] mb-[10px] mx-auto drop-shadow-2xl w-[70px] h-[40px] lg:h-[55px] xl:h-[60px] object-contain"
+                  ></img>
+                </div>
+              ))}
             </div>
-          ))}
-        </div> : ""}</div>
+          )}
+        </div>
       </div>
     </div>
   );
 }
+
 export default Skills;

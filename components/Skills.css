@@ -1,0 +1,13 @@
+.toggle-bar button {
+  transition: background-color 1s, color 1s;
+}
+
+.toggle-bar button.active {
+  background-color: #cbacf9; 
+  color: black;
+}
+
+.toggle-bar button.inactive {
+  background-color: transparent;
+  color: white;
+}
