@@ -213,7 +213,7 @@ function Skills() {
         </div>
         <div className="md:p-4 w-full flex justify-center">
           {activeComponent === "frontend" && (
-            <div className="flex flex-wrap gap-20 justify-center">
+            <div className="flex flex-wrap gap-6 md:gap-12 lg:gap-20 justify-center">
               {icons1.map((icons, k) => (
                 <div key={icons.k} className="front">
                   <p className="text-center font-semibold mt-[10px] text-[16px]">
@@ -228,7 +228,7 @@ function Skills() {
             </div>
           )}
           {activeComponent === "backend" && (
-            <div className="flex flex-wrap gap-20 justify-center">
+            <div className="flex flex-wrap gap-6 md:gap-12 lg:gap-20 justify-center">
               {icons2.map((icons, k) => (
                 <div key={icons.k} className="">
                   <p className="text-center font-semibold mt-[10px] text-[16px]">
@@ -243,7 +243,7 @@ function Skills() {
             </div>
           )}
           {activeComponent === "others" && (
-            <div className="flex flex-wrap gap-20 justify-center">
+            <div className="flex flex-wrap gap-6 md:gap-12 lg:gap-20 justify-center">
               {icons3.map((icons, k) => (
                 <div key={icons.k} className="text-center">
                   <p className="m-auto font-semibold mt-[10px] text-[16px]">
