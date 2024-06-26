@@ -20,9 +20,9 @@ const RecentProjects = () => {
             >
               <img
                 src={Data.img}
-                className="h-[400px] object-cover rounded-lg inset-0  brightness-[0.6] duration-[500ms] hover:ease-in transition-brightness group-hover:brightness-[0.3] md:w-[50rem] duration-300"
+                className="h-[400px] object-cover rounded-lg inset-0  brightness-[0.6] duration-[500ms] hover:ease-in transition-brightness group-hover:brightness-[0.2] md:w-[50rem] duration-300"
               />
-              <p className="absolute top-[15px] left-[10px] ml-[15px] duration-300 font-black text-[21px] text-white group-hover:text-white font-ra lg:text-[25px]">
+              <p className="absolute top-[15px] left-[10px] ml-[15px] duration-300 text-[21px] text-white group-hover:text-white font-ra lg:text-[25px] font-normal">
                 {Data.title}
               </p>
               <div className="absolute bottom-[15px] pl-[5px] pr-[10px]">
@@ -33,11 +33,11 @@ const RecentProjects = () => {
                   />
                 </a>
                 <div className="ml-[15px] translate-y-6 opacity-0 transform transition duration-[250ms]  group-hover:translate-y-0 group-hover:opacity-100 mb-[7px]">
-                  <p className="text-[16px] text-white  lg:text-md">
+                  <p className="text-[16px] text-white md:text-md leading-[26px] ">
                     {Data.des}
                   </p>
                 </div>
-                <div className="ml-[15px] text-[16px] mt-4 translate-y-6 opacity-0 transform transition duration-[250ms] text-white group-hover:translate-y-0 group-hover:opacity-100 lg:text-md">
+                <div className="ml-[15px] text-[15px] mt-4 translate-y-6 opacity-0 transform transition duration-[250ms] text-white group-hover:translate-y-0 group-hover:opacity-100 lg:text-md ">
                   {Data.stack}
                 </div>
               </div>

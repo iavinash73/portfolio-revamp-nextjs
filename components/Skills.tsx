@@ -74,11 +74,11 @@ function Skills() {
       n: "Supabase",
       lnk: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
     },
-    {
-      k: 12,
-      n: "Neo 4j",
-      lnk: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original-wordmark.svg",
-    },
+    // {
+    //   k: 12,
+    //   n: "Neo 4j",
+    //   lnk: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original-wordmark.svg",
+    // },
     {
       k: 13,
       n: "Express Js",
@@ -180,7 +180,7 @@ function Skills() {
   const [activeComponent, setActiveComponent] = useState("frontend");
   return (
     <div id="skills" className="flex justify-center font-Grotesk">
-      <div className="md:p-4 md:w-[70vw] my-32 flex flex-col items-center">
+      <div className="md:p-4 md:w-[85vw] my-32 flex flex-col items-center">
       <h1 className="heading font-Grotesk mb-20">
         Tech I&apos;ve had a chance to{" "}
         <span className="text-purple">Work On</span>
@@ -241,7 +241,7 @@ function Skills() {
             Others
           </button>
         </div>
-        <div className="md:p-4 w-full flex justify-center">{activeComponent == "frontend" ? <div className="flex flex-wrap space-x-9 justify-center">
+        <div className="md:p-4 w-full flex justify-center">{activeComponent == "frontend" ? <div className="flex flex-wrap gap-20 justify-center">
           {" "}
           {icons1.map((icons, k) => (
             <div key={icons.k} className="front">
@@ -259,9 +259,9 @@ function Skills() {
               ></img>
             </div>
           ))}
-        </div> : ""}{activeComponent == "backend" ? <div className="flex flex-wrap space-x-9 justify-center">
+        </div> : ""}{activeComponent == "backend" ? <div className="flex flex-wrap gap-20 justify-center">
           {icons2.map((icons, k) => (
-            <div key={icons.k} className="front">
+            <div key={icons.k} className="">
               <p className="text-center font-semibold mt-[10px] text-[16px]">
                 {icons.n}
               </p>
@@ -276,7 +276,7 @@ function Skills() {
               ></img>
             </div>
           ))}
-        </div> : ""}{activeComponent == "others" ? <div className="flex flex-wrap space-x-9 justify-center">
+        </div> : ""}{activeComponent == "others" ? <div className="flex flex-wrap gap-20 justify-center">
           {icons3.map((icons, k) => (
             <div key={icons.k} className="text-center">
               <p className="m-auto font-semibold mt-[10px] text-[16px]">

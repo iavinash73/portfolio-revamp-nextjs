@@ -1,3 +1,4 @@
+import { Roboto } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
@@ -20,8 +21,11 @@ const config = {
   prefix: "",
   theme: {
     fontFamily: {
+      Roboto: ['Roboto', 'sans'],
       Grotesk: ["Space Grotesk", "sans-serif"],
       Mono: ["Space Mono", "monospace"],
+      notoSans: ['Noto Sans', 'sans-serif'],
+
     },
     container: {
       center: true,

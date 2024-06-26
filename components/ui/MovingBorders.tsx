@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export function Button({
   borderRadius = "1.75rem",
   children,
-  as: Component = "button",
+  as: Component = "div",
   containerClassName,
   borderClassName,
   duration,
@@ -33,7 +33,7 @@ export function Button({
     <Component
       className={cn(
         // remove h-16 w-40, add  md:col-span-2
-        "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
+        "bg-transparent group relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
         containerClassName
       )}
       style={{
@@ -45,14 +45,14 @@ export function Button({
         className="absolute inset-0 rounde-[1.75rem]"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
-        <MovingBorder duration={duration} rx="30%" ry="30%">
+        {/* <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(#CBACF9_40%,transparent_60%)]",
+              "h-20 w-60 group-hover:w-0 duration-300 opacity-[0.3] bg-[radial-gradient(#CBACF9_40%,transparent_60%)]",
               borderClassName
             )}
           />
-        </MovingBorder>
+        </MovingBorder> */}
       </div>
 
       <div

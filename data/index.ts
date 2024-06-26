@@ -66,8 +66,8 @@ export const workExperience = [
     title: "Software Development Engineer Intern",
     time: "Full time",
     company: "AnswerThis",
-    duration: "April 2024 - Present",
-    desc: "Developed new product features for an AI research platform that provides summaries based on research papers. Implemented a chat functionality with PDFs using a Retrieval-Augmented Generation (RAG) pipeline.\n\nTransitioned the product from a B2C to a B2B model. Enhanced website SEO by developing a blog CMS. Optimized the entire pipeline to improve efficiency and reduce latency. Worked on several client projects with various requirements as well.",
+    duration: "April 2024 - July 2024",
+    desc: "Developed new product features for an AI research platform that provides summaries based on research papers. Worked on a chat with PDFs feature using a Retrieval-Augmented Generation (RAG) pipeline.\n\n Enhanced website SEO by developing a blog CMS. Optimized the entire pipeline to improve efficiency and reduce latency. Worked on several client projects with various requirements as well.",
   },
   {
     id: 2,
