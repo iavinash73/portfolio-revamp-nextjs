@@ -15,12 +15,12 @@ const Experience = () => {
           <Button
             key={card.id}
             duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="0.8rem"
+            borderRadius="1.8rem"
             style={{
               background: "rgb(4,7,29)",
               backgroundColor:
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              // borderRadius: `calc(1.75rem* 0.96)`,
+              borderRadius: `calc(1.75rem* 0.96)`,
             }}
             className="flex-1 text-white hover:bg-[#000000] duration-500 border border-slate-800 hover:border-purple hover:border-opacity-80 group"
           >
