@@ -60,13 +60,13 @@ export const FloatingNav = () => {
         <div className={`text-white text-[17px] font-Grotesk font-normal`}>
           <ul className={`items-center justify-center flex gap-10`}>
             <li className="text-pri-white duration-300 hover:text-purple ">
-              <a href="#projects">Projects</a>
-            </li>
-            <li className="text-pri-white duration-300 hover:text-purple ">
               <a href="#experience">Experience</a>
             </li>
             <li className="text-pri-white duration-300 hover:text-purple ">
               <a href="#skills">Skills</a>
+            <li className="text-pri-white duration-300 hover:text-purple ">
+              <a href="#projects">Projects</a>
+            </li>
             </li>
             <li className="text-pri-white duration-300 hover:text-purple ">
               <a
