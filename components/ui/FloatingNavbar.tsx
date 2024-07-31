@@ -64,9 +64,9 @@ export const FloatingNav = () => {
             </li>
             <li className="text-pri-white duration-300 hover:text-purple ">
               <a href="#skills">Skills</a>
+            </li>
             <li className="text-pri-white duration-300 hover:text-purple ">
               <a href="#projects">Projects</a>
-            </li>
             </li>
             <li className="text-pri-white duration-300 hover:text-purple ">
               <a
