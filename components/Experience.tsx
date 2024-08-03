@@ -22,9 +22,9 @@ const Experience = () => {
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
-            className="flex-1 text-white hover:bg-[#000000] duration-500 border border-slate-800 hover:border-purple hover:border-opacity-80 group"
+            className="flex-1 text-white hover:bg-[#000000] duration-500 border-[0.9px] border-slate-800  hover:border-purple hover:border-opacity-60 group"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+            <div className="flex lg:flex-row flex-col lg:items-center p-3 md:p-5 lg:p-9 gap-2">
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-3xl font-bold ">
                   {card.title}
