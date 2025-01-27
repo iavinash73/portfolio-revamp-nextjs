@@ -44,7 +44,7 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <a href="https://drive.google.com/file/d/1SejrBTbpxO9JKrRoz591TZ_qyM3BRBdg/view?usp=sharing" target="blank">
+          <a href="https://drive.google.com/file/d/1tnTq7Un5JdPkDoP39B-8GDr3BLi6I5jR/view?usp=sharing" target="blank">
             <MagicButton
               title="Resume"
               icon={<FaLocationArrow />}
